@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   get 'lists/new'
-  get 'lists/index'
-  get 'books' => 'lists#show'
+  post 'books' => 'lists#create'
+  get 'lists/show'
+  get 'books' => 'lists#index'
   get 'lists/edit'
   get 'homes/top'
   root to: 'lists#new'
